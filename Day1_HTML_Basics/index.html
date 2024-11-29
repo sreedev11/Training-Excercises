@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        h1,h2,h3,h4,h5 {
+            text-align: center; 
+            padding: 20px;
+        }
+        footer{
+            background-color: rgba(65, 145, 211, 0.277);
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+        }
+        .navbar {
+            background-color: rgba(65, 145, 211, 0.277); 
+            padding: 20px;
+            text-align: center;
+            margin-top: 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            position: relative;
+        }
+        .navbar li {
+            display: inline;
+            padding: 20px;
+    
+        }
+        .navbar li a{
+            text-decoration: none;
+        }
+        .navbar img{
+            width: 130px;
+            position: absolute;
+            left: 20px;
+            top:-20px;
+        }
+        
+        table{
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;
+        }
+        th{
+            background-color: aqua;
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        .imgcl{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .tablecl{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="navbar" >
+        <li><img src="images/ASUS logo grey.png" alt=""></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Sign up</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+    <h1>Sreedev's html basics</h1>
+<p>This is my html paragraph</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos dolorum nemo asperiores saepe et debitis, veniam magni quos, iure ipsam quisquam provident sit vel inventore rerum amet sunt dignissimos.</p>
+
+
+<p>this is a paragraph<br>using br tag</p>
+
+<div>
+    <div>this is a paragraph</div>
+<div style="color: rgb(107, 4, 128)";>seperated using div tag</div>
+</div>
+
+<div class="imgcl">
+    <img src="images/data.png">
+    <img src="images/phn.png">
+</div>
+
+
+<div>
+    <h1 style="background-color:Orange;">Orange</h1>
+    <h2 style="background-color:rgb(13, 211, 30);">Green</h2>
+    <h3 style="background-color:rgb(31, 175, 241);">Blue</h3>
+    <h4 style="background-color:rgb(238, 52, 27);">Red</h4>
+    <h5 style="background-color:rgb(255, 0, 179);">Pink</h5>
+</div>
+
+    <div class="tablecl">
+        <h2>Employee table:</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Place</th>
+                <th>Job</th>
+            </tr>
+            <tr>
+                <td>Jacob</td>
+                <td>38</td>
+                <td>Trivandrum</td>
+                <td>Tester</td>
+            </tr>
+            <tr>
+                <td>Julie</td>
+                <td>34</td>
+                <td>Kozhikode</td>
+                <td>Designer</td>
+            </tr>
+            <tr>
+                <td>Tom mathew</td>
+                <td>22</td>
+                <td>Alappuzha</td>
+                <td>UI/UX</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <b><p>ordered list</p></b>
+        <ol type="I">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <b><p>unordered list</p></b>
+        <ul type="square">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; All rights reserved</p>
+    </footer>
+</body>
+</html>

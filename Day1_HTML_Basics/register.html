@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+        }
+        .navbar {
+            background-color: rgba(65, 145, 211, 0.277); 
+            padding: 20px;
+            text-align: center;
+            margin-top: 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            position: relative;
+        }
+        .navbar li {
+            display: inline;
+            padding: 20px;
+    
+        }
+        .navbar li a{
+            text-decoration: none;
+        }
+        .navbar img{
+            width: 130px;
+            position: absolute;
+            left: 20px;
+            top:-20px;
+        }
+        .form-class1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .form-card1{
+            background: rgba(65, 145, 211, 0.277);
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: relative;
+            width:20%
+    
+        }
+        .form-card1 div{
+            margin-bottom: 30px;
+        }
+        .form-card1 input[type="text"],
+        .form-card1 input[type="password"],
+        .form-card1 input[type="date"]{
+            position: absolute;
+            right: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 30px;
+        }
+        .form-card1 textarea,select{
+            position: absolute;
+            right:20px;
+            border-radius: 10px;
+            height: 40px;
+        }
+        .form-class1 h2{
+            text-align: center;
+        }
+        .form-class1 input[type="submit"]{
+            width:70%;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background: rgb(166, 166, 204);
+        }
+        .btncl2{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar" >
+        <li><img src="images/ASUS logo grey.png" alt=""></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Sign up</a></li>
+        <li><a href="About.html">About</a></li>
+    </ul>
+    <div class="form-class1">
+        <form action="" class="form-card1">
+            <div>
+                <h2>Register Form</h2>
+            </div>
+            <div>
+                <label for="fname">First name</label>
+                <input type="text" name="fname" id="fname">
+            </div>
+            <div>
+                <label for="lname">Last name</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+            <div>
+                <label for="bdate">Date of Birth</label>
+                <input type="date" name="bdate" id="bdate">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age">
+            </div>
+            <div>
+                <label for="gender">Gender</label>
+                <label>
+                    <input type="radio" name="gender" value="male">Male
+                </label>
+        
+                <label>
+                    <input type="radio" name="gender" value="female">Female
+                </label>
+            </div>
+            <div>
+                <label for="phn">Phone Number</label>
+                <input type="text" name="phn" id="phn">
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="add">Address</label>
+                <textarea name="add" id="add"></textarea>
+            </div>
+            <div>
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="india">Bihar</option>
+                    <option value="india">Tamil nadu</option>
+                    <option value="india">Kerala</option>
+                </select>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <option value="">Select City</option>
+                </select>
+            </div>
+            <div>
+                <label for="usr">Username</label>
+                <input type="text" name="usr" id="usr">
+            </div>
+
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+
+            <div>
+                <label for="pass1">Confirm Password</label>
+                <input type="text" name="pass1" id="padd1">
+            </div>
+
+            <div class="btncl2">
+                <input type="submit" value="Register">
+            </div>
+           
+        
+        </form>
+    </div>
+</body>
+</html>
