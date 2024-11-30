@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            text-align: center;
+        }
+        nav{
+            background: rgb(51, 49, 49);
+            height: 50px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+        }
+        nav a{
+            color:white;
+            text-decoration: none;
+            padding: 40px;
+        }
+        footer{
+            background: grey;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #intro{
+            background-color: rgb(196, 186, 186);
+            padding: 10px;
+            display: block;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+        }
+        .content_box{
+            background: blue;
+            padding: 12px;
+            border: 2px solid black;
+            width: 400px;
+            margin:20px;
+        }
+        #box_1{
+            background:black;
+            color: aqua;
+            border: 2px solid rgb(8, 230, 156);
+            padding: 20px;
+        }
+        #box_2{
+            background: green;
+            color: white;
+            border:3px solid red;
+            padding: 40px;
+        }
+        #box_3{
+            background-image: url("images/leaf.webp");
+            color: rgba(4, 8, 10, 0.918);
+            border:3px solid rgb(7, 158, 108);
+            padding: 40px;
+            height: 300px;
+        }
+        .pseudo-example{
+            background: greenyellow;
+            height:70px;
+        }
+        .pseudo-example::after{
+            content:"This will change to blue on hover";
+            font-size: large;
+            color: red;
+        }
+        .pseudo-example::before{
+            content:"CHECK THIS :";
+            font-variant: small-caps;
+            font-style: italic;
+            color:red;
+        }
+
+        .pseudo-example:hover{
+            background-color: blue;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+            color:blue;
+            background: yellow;
+        }
+        .btn:focus{
+            color:white;
+            background: grey;
+        }
+        .btn:active{
+            border:3px solid green;
+        }
+        
+        #intro p::first-line{
+            color:blueviolet;
+            font-variant: small-caps;
+            font-size: xx-large;
+        }
+        #intro p::first-letter{
+            color:red;
+            font-size: xx-large;
+        }
+        #intro p::selection{
+            background-color: yellow;
+            color:black;
+        }
+
+        #pseudo_elem{
+            background: grey;
+            height: 50px;
+        }
+        #pseudo_elem a:hover{
+            font-size: 40px;
+            color:purple;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Basic Review</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="intro">
+            <h3>INTRODUCTION</h3>
+            <p>This is the introduction part.this is a breif intro part that  uses different text properties such as font size color and line height
+        </div>
+        <div id="container">
+            <div class="content_box" id="box_1">
+                <h4>BOX 1</h4>
+                <p>In the box 1 there is a background </p>
+            </div>
+            <div class="content_box" id="box_2">
+                <h4>BOX 2</h4>
+                <p>The box 2 have a background, border colour is red, and using #box_2 p the color of this paragraph is set to white</p>
+            </div>
+            <div class="content_box" id="box_3">
+                <h4>BOX 3</h4>
+                <p>the box 3 have a background image</p>
+            </div>
+        </div>
+        <div>
+            <h1>introduction to pseudo Classes</h1>
+            <button class="btn">Hover over me!</button>
+            <h3>pseudo elements</h3>   
+            <p class="pseudo-example">This is a paragraph.</p>
+            <p id="pseudo_elem">This <a href="">paragraph</a> has a paragraph hover effect and after it using pseudo-elements.</p>
+        
+
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy;2024 CSS Basic Review</p>
+    </footer>
+</body>
+</html>

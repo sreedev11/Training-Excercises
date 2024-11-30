@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 7px;
+            padding: 2px;
+        }
+
+        nav{
+            display: block;
+            text-align: center;
+            background-color: gray;
+            margin-top: 0%;
+            padding: 10px;
+        }
+        nav a{
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        header h1{
+            text-align: center;
+            font-weight: bold;
+        }
+        .section{
+            background: lightgrey;
+            padding:12px;
+            margin: 10px;
+        }
+        h4{ 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .class-sel-example{
+            background: green;
+            color:white;
+        }
+        #unique{
+            color:blue;
+            text-transform: lowercase;
+            background: yellow;
+        }
+        input[type="text"]{  
+            padding: 10px;
+            border: 2px solid purple;
+            width:90%;
+        }
+         div p{
+            letter-spacing: 2px;
+        }
+        ul>li{
+            color:red;
+            font-size: 30px;
+        }
+
+        h3+p{
+            color: blue;
+            font-style: italic;
+        }
+        h4~p{
+            color:brown;
+            font-style: bold;
+        }
+
+        footer{
+            background: grey;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="section" id="universal">
+            <h2>Universal Selector</h2>
+            <p>Targets all the elements in the page. This paragraph is styled with Universal selector(*),which applies to all elements</p>
+        </div>
+        <div class="section" id="type">
+            <h2>Type selector </h2>
+            <h4>Heading and paragraph</h4>
+            <p>This is an example of a paragraph styled by type selector</p>
+        </div>
+        <div class="class-sel-example" id="class">
+            <h2>Class selector </h2>
+            <h4>Heading and paragraph</h4>
+            <p>This section is styled using class selector</p>
+        </div>
+        <div class="section" id="unique">
+            <h2>ID selector </h2>
+            <h4>Heading and paragraph</h4>
+            <p>This section is styled using class selector</p>
+        </div>
+        <div class="section" id="attribute">
+            <h2>Attribute selector </h2>
+            <label for="name">Type your name:</label><br>
+            <input type="text" id="name" placeholder="type your name...">
+        </div>
+        <div class="section" id="descendant">
+            <h2>Descendant selector </h2>
+            <p>This paragraph is inside a div and styled by descendant selector (div p).</p>
+        </div>
+        <div class="section" id="child">
+            <h2>Child selector </h2>
+            <ul>
+                <li>First child item styled using child selector</li>
+                <li>Another child item in the list</li>
+            </ul>
+        </div>
+        <div class="section" id="adjacent">
+            <h2>Adjacent selector </h2>
+            <h3>This is a Heading</h3>
+            <p>This paragraph is styled as an adjacent sibling to the above Heading(h3+p).</p>
+        </div>
+        <div class="section" id="sibling">
+            <h2>General Sibling selector </h2>
+            <h4>Another heading</h4>
+            <p>This paragraph is styled as a general sibling to the above Heading(h4~p).</p>
+            <p>Another sibling paragraph styled the same way</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 CSS Selectors Practice</p>
+    </footer>
+    
+</body>
+</html>
