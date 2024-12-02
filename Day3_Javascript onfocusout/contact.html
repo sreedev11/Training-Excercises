@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background: grey;
+            padding: 30px;
+            text-align: center;
+        }
+        .navbar img{
+            width:60px;
+            position: absolute;
+            top:10px;
+            left:20px;
+        }
+        .navbar li{
+            display: inline;
+            list-style-type:none;
+            margin:0 20px;
+
+        }
+        .navbar li a{
+            text-decoration: none;
+            color:white;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .contact{
+            background: rgb(224, 224, 226);
+            border:1px solid black;
+            border-radius: 15px;
+            width: 340px;
+            text-align: center;
+        }
+
+        .contact .title{
+            background: linear-gradient(90deg,purple,pink);
+            height: 70px;
+            border-radius:15px 15px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact .contact-ele{
+            padding: 10px;
+        }
+        .contact .contact-ele input[type="text"],
+        .contact .contact-ele input[type="password"]{
+            width: 100%;
+            height:40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .contact .contact-ele textarea{
+            width: 100%;
+            height: 70px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+
+        }
+        .contact .contact-ele input[type="submit"]{
+            width: 90%;
+            height:40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            background: linear-gradient(90deg,purple,pink);
+            margin-bottom: 10px;
+        }
+
+        footer{
+            background: grey;
+            padding: 12px;
+            color: white;
+            text-align: center;
+        }
+
+        .errClass{
+            color:red;
+            font-size: 15px;
+        }
+
+        @media(max-width:630px){
+            .navbar li{
+                display: block;
+                padding: 10px;
+                margin-top: 20px;
+            }
+            main{
+                height: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><img src="images/Screenshot 2024-12-01 121737.png" alt="Logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="sign.html">Sign up</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <form action="" class="contact" id="contact">
+            <div class="title">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="contact-ele">
+                <div><span id="nameerr" class="errClass"></span>
+                    <input type="text" id="name" name="name" placeholder="Name" onfocusout="nameValid()">
+                </div>
+                <div><span id="emailerr" class="errClass"></span>
+                    <input type="text" id="email" name="email" placeholder="Email" onfocusout="validEmail()">
+                </div>
+                <div><span id="phnerr" class="errClass"></span>
+                    <input type="text" id="phn" name="phn" placeholder="Phone No" onfocusout="validPhn()">
+                </div>
+                <div><span id="meserr" class="errClass"></span>
+                    <textarea name="message" id="msg" placeholder="Message" onfocusout="messValid()"></textarea>
+                </div>
+                <div>
+                    
+                    <input type="submit" value="Submit" onclick="formval()">
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+       <p>&copy;all rights reserved</p>
+    </footer>
+
+    <script>
+
+
+        function nameValid(){
+            const name=document.getElementById("name").value.trim();
+            const nameerr=document.getElementById("nameerr");
+            regname=/^[A-Za-z ]+$/;
+
+            if(name==""){
+                nameerr.textContent='name cannot be empty';
+            }
+            else if(!regname.test(name)){
+                nameerr.textContent='name format not correct';
+            }
+            else{
+                nameerr.textContent='';
+            }
+        }
+
+        function validEmail(){
+            const email=document.getElementById('email').value.trim();
+            const emailerr=document.getElementById('emailerr');
+            const regEmail= /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+            if(email===''){
+                emailerr.textContent='please enter the email';
+            }
+            else if(!regEmail.test(email)){
+                emailerr.textContent='email format is wrong';
+            }
+            else{
+                emailerr.textContent='';
+            }
+        }
+
+        function validPhn(){
+            const phn=document.getElementById('phn').value.trim();
+            const phnerr=document.getElementById('phnerr');
+            const phnreg=/^\d{10}$/;
+
+            if(phn===''){
+                phnerr.textContent='phone number cannot be empty';
+            }
+            else if(!phnreg.test(phn)){
+                phnerr.textContent='phone number wrong format';
+            }
+            else{
+                phnerr.textContent='';
+            }
+        }
+        function messValid(){
+            const mess=document.getElementById('msg').value.trim();
+            const meserr=document.getElementById('meserr');
+
+            if(mess===''){
+                meserr.textContent='message cannot be empty';
+            }
+            else{
+                meserr.textContent='';
+            }
+        }
+
+        document.getElementById('contact').addEventListener('submit',function (event){
+            nameValid();
+            validEmail();
+            validPhn();
+            messValid();
+
+            const errors=document.querySelectorAll('.errClass');
+            for(let err of errors){
+                if (err.textContent!==''){
+                    event.preventDefault();
+                    alert('please correct all errors');
+                    break;
+                }
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
