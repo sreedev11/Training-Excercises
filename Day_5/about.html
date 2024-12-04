@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background: grey;
+            width: auto;
+            padding: 20px;
+            text-align: right;
+        }
+        .navbar li{
+            display: inline;
+            padding: 12px;
+            margin: 0 20px;
+            list-style-type: none;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar img{
+            position: absolute;
+            left:20px;
+            width: 45px;
+            top:6px;
+            border-radius: 50%;
+        }
+        main{
+            height:auto;
+            display:flex;
+            justify-content: center;
+            width: 100%; 
+            background: url('images/7087596.jpg') no-repeat center center; 
+            background-size: cover; 
+        }
+        footer{
+            background: grey;
+            text-align: center;
+            padding: 12px;
+            color: white;
+        }
+        .container{
+            width:700px;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .box{
+            background: linear-gradient(190deg,purple,pink);
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px  solid black;
+            border-radius: 15px;
+        }
+
+        .box .btncl{
+            width: 40%;
+            height: 40px;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            background: gray;
+            color: white;
+        }
+        .box h2{
+            padding: 30px 0 30px 0;
+            font-size: 29px;
+        }
+        .box p{
+            margin-bottom: 20px;
+        }
+        .logo{
+            color: white;
+            font-style: bold;
+            font-weight: 600;
+            font-size: larger;
+            position: absolute;
+            left: 70px;
+        }
+
+        @media(max-width:700px){
+            .navbar li{
+                display:block;
+                padding: 5px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            .btncl{
+                font-size: 12px;
+            }
+            .logo{
+                top: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><img src="images/Screenshot 2024-12-01 121737.png" alt="Logo"></li>
+            <li><span class="logo">ANY FC</span></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="sign.html">Sign up</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="box">
+                <h2>We Focus on</h2>
+                <p>provide best services to our clients and brings excellence in everything we do</p>
+            </div>
+            <div class="box">
+                <h2>Our Team</h2>
+                <p>We are a group of passionate and dedicated individuals with expertise in diverse fields. Our team's collaboration and commitment drive our success</p>
+            </div>
+            <div class="box">
+                <h2>Why Choose Us</h2>
+                <p>With 4 years of experience and a customer-first approach, we are here to ensure your satisfaction. Quality, trust, and excellence are the pillars of our success.</p>
+            </div>
+            <div class="box">
+                <h2>Contact Us</h2>
+                <p>Sreedev D & Co pvt Ltd.| B-39, 1st Floor</p>
+                <p> Middle Circle, Connaught Place, New Delhi-110001, India</p>
+                <p>Support-7290068900 | CIN: U27205DL2009PTC190441</p>
+                <a href="contact.html"><button class="btncl">Or message us</button></a>    
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

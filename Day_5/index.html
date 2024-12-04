@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background: grey;
+            width: auto;
+            padding: 20px;
+            text-align: right;
+        }
+        .navbar li{
+            display: inline;
+            padding: 12px;
+            margin: 0 20px;
+            list-style-type: none;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar img{
+            position: absolute;
+            left:20px;
+            width: 45px;
+            top:6px;
+            border-radius: 50%;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+               
+        }
+        .main_container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; 
+            background: url('images/7087596.jpg') no-repeat center center; 
+            background-size: cover; 
+        }
+        .container{
+            width:40%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+        }
+        .container .img-carosal{
+            position: relative;
+            width: 500%; 
+            animation: img-carosal 7s infinite;
+        }
+        .container .img-carosal img{
+            float: left;
+            width:calc(100%/5);
+            
+        }
+
+        @keyframes img-carosal {
+            0%{
+                left:0;
+            }
+            10%{
+                left:0;
+            }
+            20%{
+                left:-100%;
+            }
+            30%{
+                left:-100%;
+            }
+            40%{
+                left:-200%;
+            }
+            50%{
+                left:-200%;
+            }
+            60%{
+                left:-300%;
+            }
+            70%{
+                left:-300%;
+            }
+            80%{
+                left:-400%;
+            }
+            90%{
+                left:-400%;
+            }
+            100%{
+                left:0;
+            }
+            
+        }
+        footer{
+            background: grey;
+            padding: 10px;
+        }
+        .copy{
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        .line{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        .box{
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .box img{
+            width: 150px;
+            height:150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .box ul{
+            list-style-type: none;
+        }
+        .box h2,h3{
+            margin-bottom: 10px;
+        }
+        .box ul a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo{
+            color: white;
+            font-style: bold;
+            font-weight: 600;
+            font-size: larger;
+            position: absolute;
+            left: 70px;
+        }
+
+
+        @media(max-width:700px){
+            .navbar li{
+                display:block;
+                padding: 5px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            .btncl{
+                font-size: 12px;
+            }
+            .logo{
+                top: 20px;
+            }
+        }  
+
+        @media(max-width:850px){
+            .line{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .logo{
+                top: 20px;
+            }
+        }
+        @media(max-width:650px){
+            .line{
+                grid-template-columns: 1fr;
+            }
+            .logo{
+                top: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <header>
+        <ul class="navbar">
+            <li><img src="images/Screenshot 2024-12-01 121737.png" alt="Logo"></li>
+            <li><span class="logo">ANY FC</span></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="sign.html">Sign up</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="main_container">
+            <div class="container">
+                <div class="img-carosal">
+                    <img src="images/Screenshot 2024-12-01 173035.png" alt="">
+                    <img src="images/Screenshot 2024-12-01 173103.png" alt="">
+                    <img src="images/Screenshot 2024-12-01 173124.png" alt="">
+                    <img src="images/Screenshot 2024-12-01 173149.png" alt="">
+                    <img src="images/Screenshot 2024-12-01 173218.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="line">
+            <aside class="box">
+                <img src="images/Screenshot 2024-12-01 121737.png"alt="logo">
+            </aside>
+            <aside class="box">
+                <h3>Registered Office:</h3>
+                <h2>Contact Us</h2>
+                <p>Sreedev D & Co pvt Ltd.| B-39, 1st Floor</p>
+                <p> Middle Circle, Connaught Place, New Delhi-110001, India</p>
+                <p>Support-7290068900 | CIN: U27205DL2009PTC190441</p>
+                
+            </aside>
+            <aside class="box">
+                <h3>Disclaimer</h3>
+                <p>** All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
+                    </p>
+            </aside>
+            <aside class="box">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">twitter</a></li>
+                    <li><a href="">instagram</a></li>
+                    <li><a href="">linkedn</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="copy">
+            <p>&copy;All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

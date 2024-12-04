@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background: grey;
+            width: auto;
+            padding: 20px;
+            text-align: right;
+        }
+        .navbar li{
+            display: inline;
+            padding: 12px;
+            margin: 0 20px;
+            list-style-type: none;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar img{
+            position: absolute;
+            left:20px;
+            width: 45px;
+            top:6px;
+            border-radius: 50%;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            width: 100%; 
+            background: url('images/7087596.jpg') no-repeat center center; 
+            background-size: cover; 
+        }
+        .login-form{
+            margin-top: 200px;
+            background: rgb(228, 228, 228,0.7);
+            width: 500px;
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-bottom: 200px;
+        }
+
+        .login-form .title{
+            background: linear-gradient(90deg,purple,pink);
+            height:100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .login-form .login-ele{
+            padding: 20px;
+            text-align: center;
+        }
+        .login-form .login-ele input[type="text"],
+        .login-form .login-ele input[type="password"]{
+            width:100%;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .login-form .login-ele input[type="submit"]{
+            width:90%;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            background: linear-gradient(90deg,purple,pink);
+
+        }
+
+        .login-form .login-ele a{
+            text-decoration: none;
+        }
+
+        .login-form .login-ele div{
+            margin-bottom: 20px;
+        }
+        
+        .space span,
+        .space a{
+            margin:0 30px;
+        }
+        .errClass{
+            color: red;
+            font-size: 15px;
+            text-align: left;
+            display: block;
+        }
+        footer{
+            background: grey;
+            padding: 12px;
+            color: white;
+            text-align: center;
+        }
+        .logo{
+            color: white;
+            font-style: bold;
+            font-weight: 600;
+            font-size: larger;
+            position: absolute;
+            left: 70px;
+        }
+
+
+        @media(max-width:690px){
+            .navbar li{
+                display:block;
+                padding: 5px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            .login-form .title{
+                font-size: 15px;
+            }
+            .login-form{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .logo{
+                top: 20px;
+            }
+
+        }
+
+        @media(max-width:390px){
+            .space span,
+            .space a{
+                display:block;
+            }
+            .logo{
+                top: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><img src="images/Screenshot 2024-12-01 121737.png" alt="Logo"></li>
+            <li><span class="logo">ANY FC</span></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="sign.html">Sign up</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <form action="#" class="login-form" id="login">
+            <div class="title">
+                <h2>Login Form</h2>
+            </div>
+            <div class="login-ele">
+                <div>
+                    <input type="text" name="email" id="email" placeholder="Email" onfocusout="emailVal()">
+                    <span id="err" class="errClass"></span>
+                </div>
+                <div>
+                    <input type="password" name="pass" id="pass" placeholder="Password" onfocusout="pasVal()">
+                    <span id="err1" class="errClass"></span>
+                </div>
+                <div class="space">
+                    <span><input type="checkbox" name="check" id="check">Remember me </span> <a href="">Forgot password</a>
+                </div>
+                <div>
+                    <input type="submit" value="Login">
+                </div>
+                <div>
+                    <span>Don't have an account?  </span><a href="sign.html">Sign Up</a>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;all rights reserved</p>
+     </footer>
+    <script>
+        function emailVal(){
+            const email=document.getElementById('email').value.trim();
+            const emreg = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            const err=document.getElementById('err');
+
+            if(email===''){
+                err.textContent='Enter an email';
+            }
+            else if(!emreg.test(email)){
+                err.textContent='Wrong email format';
+            }
+            else{
+                err.textContent='';
+            }
+        }
+        function pasVal(){
+            const pass=document.getElementById('pass').value.trim();
+            const err1=document.getElementById('err1');
+
+            if(pass===''){
+                err1.textContent='Password cannot be empty';
+            }else{
+                err1.textContent='';
+            }
+        }
+
+        document.getElementById('login').addEventListener('submit',function(event){
+            emailVal();
+            pasVal();
+
+            const error=document.querySelectorAll('.errClass');
+            for(let er of  error){
+                if(er.textContent!=''){
+                    event.preventDefault();
+                    alert('please check the errors');
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
